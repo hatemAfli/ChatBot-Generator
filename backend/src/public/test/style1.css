@@ -1,0 +1,136 @@
+:root {
+  /* From designe_json */
+  --color-neutral: #F0F0F0;
+  --color-primary: #008000;
+  --color-secondary: #FFD700;
+
+  --border-radius: 16px; /* 'large' → mapped to px */
+  --font-size: 1.1rem; /* 'grande' */
+  --typing-animation: wave; /* Just a label, JS/CSS will implement */
+
+  --launcher-icon: url('house_icon.png');
+}
+
+/* Chatbot container */
+#chatbot-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 320px;
+  height: 420px;
+  background: var(--color-neutral);
+  border-radius: var(--border-radius);
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  font-size: var(--font-size);
+  font-family: Arial, sans-serif;
+  z-index: 9999;
+}
+
+/* Header */
+#chatbot-header {
+  background: var(--color-primary);
+  color: white;
+  padding: 10px;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Messages area */
+#chatbot-messages {
+  flex: 1;
+  padding: 10px;
+  overflow-y: auto;
+}
+
+/* Message bubbles */
+.message {
+  margin: 6px 0;
+  padding: 8px 12px;
+  border-radius: var(--border-radius);
+  max-width: 80%;
+}
+
+.message.user {
+  background: var(--color-primary);
+  color: white;
+  align-self: flex-end;
+}
+
+.message.bot {
+  background: var(--color-secondary);
+  color: black;
+  align-self: flex-start;
+}
+
+/* Input area */
+#chatbot-input-area {
+  display: flex;
+  border-top: 1px solid #ccc;
+}
+
+#chatbot-input {
+  flex: 1;
+  border: none;
+  padding: 10px;
+  font-size: var(--font-size);
+}
+
+#chatbot-send {
+  background: var(--color-primary);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+/* Launcher button */
+#chatbot-launcher {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: var(--color-primary);
+  background-image: var(--launcher-icon);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 60%;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  z-index: 9999;
+}
+
+/* Typing animation (wave) */
+.typing-indicator {
+  display: inline-block;
+}
+
+.typing-indicator span {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  margin: 0 2px;
+  background: #333;
+  border-radius: 50%;
+  animation: wave 1.2s infinite ease-in-out;
+}
+
+.typing-indicator span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.typing-indicator span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes wave {
+  0%, 60%, 100% {
+    transform: initial;
+  }
+  30% {
+    transform: translateY(-6px);
+  }
+}
