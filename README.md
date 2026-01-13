@@ -77,7 +77,7 @@ This project follows a **microservices architecture** with three main components
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/chatbot-project.git
+git clone https://github.com/hatemAfli/chatbot-project.git
 cd chatbot-project
 ```
 
@@ -380,7 +380,6 @@ npm run preview    # Preview production build
 ## 📚 Documentation
 
 - **`ARCHITECTURE_BACKEND.md`** - Complete backend architecture documentation
-- **`RESUME_PRESENTATION.md`** - Summary for presentations
 
 ## 🐛 Troubleshooting
 
@@ -438,10 +437,4 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ```
 
-## 📞 Support
-
-For support, please open an issue on GitHub or contact the development team.
-
----
-
-**Note**: This project is actively being developed. For detailed architecture documentation, see `ARCHITECTURE_BACKEND.md`.
+**Note**: This project is actively being developed (Frontend part). For detailed architecture documentation, see `ARCHITECTURE_BACKEND.md`.
